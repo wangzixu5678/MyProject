@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.duodian.myapplication.MainActivity">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:text="发广播"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn2"
+        android:text="发广播22"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+buildscript {
+    ext.kotlin_version = "1.6.20"
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/releases" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        //乐变
+        maven { url 'https://loveota-maven.pkg.coding.net/repository/bintray/lebianplugin/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/releases" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
