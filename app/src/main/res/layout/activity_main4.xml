@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4">
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+        <TextView
+
+            android:gravity="center"
+            android:background="@drawable/bg"
+            android:text="扫光展示"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_width="100dp"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:id="@+id/img_sl"
+            android:src="@drawable/sl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <Button
+        android:onClick="pauseAnim"
+        android:text="pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
+    <Button
+        android:onClick="resumeAnim"
+        android:text="resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.duodian.myapplication.ticker.TickerView
+        android:id="@+id/tickerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="50sp"
+        android:text="0"
+        android:textColor="#00f"
+        android:textStyle="bold"
+       />
+
+    <LinearLayout
+       android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.duodian.myapplication.rollingtextview.RollingTextView
+            android:id="@+id/alphaBetView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="25sp"
+            android:textColor="#1d1d1d"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:text="%的概率"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#1d1d1d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

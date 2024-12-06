@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = "1.6.20"
+    ext.kotlin_version = "1.8.22"
     repositories {
         google()
         mavenCentral()
@@ -15,7 +15,8 @@ buildscript {
         maven { url 'https://loveota-maven.pkg.coding.net/repository/bintray/lebianplugin/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+
+        classpath 'com.android.tools.build:gradle:7.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }

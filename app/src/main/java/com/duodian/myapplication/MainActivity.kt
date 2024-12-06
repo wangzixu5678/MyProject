@@ -17,7 +17,6 @@ import com.blankj.utilcode.util.ConvertUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
 import com.blankj.utilcode.util.ThreadUtils
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,11 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        ThreadUtils.runOnUiThreadDelayed(Runnable {
-            var density1 = Resources.getSystem().displayMetrics.density
-            var density2 = resources.displayMetrics.density
-            LogUtils.d("density1 = ${density1}density2 = ${density2} 100dp = ${ConvertUtils.px2dp(btn2.width.toFloat())}")
-        },2000)
+
     }
 
 

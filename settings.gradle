@@ -1,2 +1,8 @@
 rootProject.name = "MyProject"
 include ':app'
+include ':aptlib-processor'
+include ':aptlib-anno'
+
+ 
+
+
