@@ -15,7 +15,6 @@ class MainActivity5 : AppCompatActivity() {
 
     //test1
 
-    //test2
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
