@@ -16,7 +16,7 @@ class MainActivity5 : AppCompatActivity() {
 
     private val mHandler = Handler()
 
-    //1
+    //2
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
