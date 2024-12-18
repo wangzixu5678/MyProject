@@ -8,15 +8,19 @@ import com.facebook.drawee.backends.pipeline.Fresco
 
 
 class App : Application() {
+    companion object{
+       lateinit var context:Context
+    }
     override fun onCreate() {
+
         super.onCreate()
+        context = this
         Fresco.initialize(this)
         ClickEventManager.initialize(this)
     }
 
 
     override fun attachBaseContext(base: Context?) {
-        NetworkUtils.getNetworkType()
         super.attachBaseContext(LanguageUtil.attachBaseContext(base))
     }
 
