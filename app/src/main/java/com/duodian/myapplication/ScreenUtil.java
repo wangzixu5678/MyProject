@@ -6,6 +6,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,5 +56,33 @@ public class ScreenUtil {
 
         // 返回屏幕信息
         return map;
+    }
+
+    public static long getInstallTimeNatureEndDay (int day) {
+        long local = System.currentTimeMillis() - 60 * 60 * 24 * 1000 ;
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(local);  // 将时间戳转换为毫秒
+        // 计算下一天的日期
+        calendar.add(Calendar.DAY_OF_YEAR, day);
+        // 将时间调整为0点
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.SECOND, 59);
+        calendar.set(Calendar.MILLISECOND, 0);
+        // 转换回时间戳并输出
+        return calendar.getTimeInMillis();
+    }
+
+
+
+    public static int getCurDayNatureDaySinceInstall() {
+        long curr = System.currentTimeMillis();
+        long local = getInstallTimeNatureEndDay(0);
+        if (curr < local) {
+            return 0;
+        }
+        long r = curr - local;
+        long d_1 = r / 60 * 60 * 24 * 1000 + 1; //天
+        return (int) (d_1);
     }
 }
