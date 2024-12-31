@@ -8,8 +8,6 @@ import android.util.Log
 import android.webkit.WebView
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.blankj.utilcode.util.ThreadUtils
-import com.blankj.utilcode.util.ToastUtils
 
 
 class MainActivity5 : AppCompatActivity() {
@@ -17,7 +15,7 @@ class MainActivity5 : AppCompatActivity() {
     private val mHandler = Handler()
 
 
-    //哈哈5
+    //哈哈8
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +25,9 @@ class MainActivity5 : AppCompatActivity() {
 
         var count = 0
 
+        for (i in 1..100){
+            Log.d("AAA",Math.random().toString())
+        }
 
 
         findViewById<Button>(R.id.btn_switch_language).setOnClickListener {
